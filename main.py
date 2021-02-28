@@ -82,7 +82,7 @@ def start_screen():
     fon = pygame.transform.scale(load_image('background.png'), (WIDTH, HEIGHT))
     screen.blit(fon, (0, 0))
     font = pygame.font.Font(None, 30)
-    pygame.mixer.music.load(os.path.join('data', 'startscreanmusic.mp3'))
+    pygame.mixer.music.load(os.path.join('data', 'startscreenmusic.mp3'))
     pygame.mixer.music.play(-1, 0.0)
     text_coord = 50
     for line in intro_text:
