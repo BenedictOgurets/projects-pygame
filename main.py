@@ -140,13 +140,14 @@ class Asteroid(pygame.sprite.Sprite):
         self.minspeed = 1
         self.maxsize = 40
         self.minsize = 20
-        self.mask = pygame.mask.from_surface(self.image)
 
     def generate(self):
         self.size = random.randint(self.minsize, self.maxsize)
         self.rect = pygame.Rect(random.randint(0, WIDTH - self.size), 0, self.size, self.size)
         self.speed = random.randint(self.minspeed, self.maxspeed)
         self.image = pygame.transform.scale(asteroid_image, (self.size, self.size))
+        self.mask = pygame.mask.from_surface(self.image)
+
 
     def update(self):
         global running
